@@ -203,7 +203,7 @@ def SettingsDialogExecute():
 
 
 def init_settings_dialog():
-    menu = get_anking_menu()
+    # Add to Tools menu instead of AnKing menu
     a = QAction("Field Autocomplete", mw)
     a.triggered.connect(SettingsDialogExecute)
-    menu.addAction(a)
+    mw.form.menuTools.addAction(a)
